@@ -50,10 +50,34 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
-    img {
-      max-width: 100%;
+    .flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .text {
+      flex: 1 1 300px;
+    }
+
+    .image {
+      flex: 1 1 300px;
+      max-width: 350px;
+    }
+
+    .image img {
+      width: 100%;
       border-radius: 12px;
-      margin-top: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .flex {
+        flex-direction: column;
+      }
+      .image {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
@@ -70,10 +94,14 @@
 
   <div class="container">
     <h2>Sobre o Agro CRM</h2>
-    <div class="card">
-      <p>O <strong>Agro CRM</strong> é um aplicativo inovador desenvolvido para gerenciar clientes, dados de campo e tendências do agronegócio de forma simples, eficiente e inteligente.</p>
-      <p>Com ele, produtores e empresas do setor têm acesso a ferramentas como controle de clima, histórico de preços de commodities, acompanhamento de clientes e muito mais – tudo em uma única plataforma.</p>
-      <img src="img/img.jpg" alt="Tela do app Agro CRM">
+    <div class="card flex">
+      <div class="text">
+        <p>O <strong>Agro CRM</strong> é um aplicativo inovador desenvolvido para gerenciar clientes, dados de campo e tendências do agronegócio de forma simples, eficiente e inteligente.</p>
+        <p>Com ele, produtores e empresas do setor têm acesso a ferramentas como controle de clima, histórico de preços de commodities, acompanhamento de clientes e muito mais – tudo em uma única plataforma.</p>
+      </div>
+      <div class="image">
+        <img src="Imagem do WhatsApp de 2025-06-16 à(s) 21.22.40_2ee1bc64.jpg" alt="Tela do app Agro CRM">
+      </div>
     </div>
   </div>
 
